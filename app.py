@@ -8,8 +8,7 @@ from auth.route import router_user
 app = FastAPI(
     debug=True,
     title="Aplikasi marketplace",
-    description="Aplikasi pengelolaan penjualan  ",
-    lifespan=lifespan
+    description="Aplikasi pengelolaan penjualan  "
 )
 
 app.add_middleware(
