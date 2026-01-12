@@ -3,12 +3,20 @@ from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 from db.main import init_db
 from auth.route import router_user
-  
+
+# @asynccontextmanager
+# async def lifespan(app: FastAPI):
+#     print("\n\nServer has started...\n\n")
+#     await init_db()
+#     yield
+#     print("\n\nServer has stopped...\n\n")
+    
     
 app = FastAPI(
     debug=True,
     title="Aplikasi marketplace",
-    description="Aplikasi pengelolaan penjualan  "
+    description="Aplikasi pengelolaan penjualan  ",
+    # lifespan=lifespan
 )
 
 app.add_middleware(
